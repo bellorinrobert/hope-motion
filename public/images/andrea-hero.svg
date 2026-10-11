@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000" role="img" aria-label="Fotografía principal de Andrea (imagen de referencia)">
+  <defs>
+    <linearGradient id="heroBase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1b1310"/>
+      <stop offset="45%" stop-color="#3b2119"/>
+      <stop offset="100%" stop-color="#8a3f26"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="0.7" cy="0.28" r="0.75">
+      <stop offset="0%" stop-color="#d9a441" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#c05a38" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1b1310" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="heroShade" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#120c09" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#120c09" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="heroBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="2000" fill="url(#heroBase)"/>
+  <rect width="1600" height="2000" fill="url(#heroGlow)"/>
+
+  <g filter="url(#heroBlur)" opacity="0.55">
+    <circle cx="1180" cy="520" r="300" fill="#e8b45c"/>
+    <circle cx="380" cy="1420" r="340" fill="#c05a38"/>
+    <circle cx="1320" cy="1560" r="240" fill="#8f5a3a"/>
+  </g>
+
+  <g stroke="#f8f2e9" stroke-opacity="0.16" stroke-width="2" fill="none">
+    <path d="M-40 1640 C 380 1520, 700 1760, 1100 1600 S 1560 1420, 1700 1500"/>
+    <path d="M-40 1760 C 380 1640, 700 1880, 1100 1720 S 1560 1540, 1700 1620"/>
+    <path d="M-40 1880 C 380 1760, 700 2000, 1100 1840 S 1560 1660, 1700 1740"/>
+  </g>
+
+  <g fill="#f8f2e9" fill-opacity="0.9" font-family="Georgia, 'Times New Roman', serif">
+    <text x="120" y="1840" font-size="86" font-style="italic">un paso a la vez</text>
+    <text x="124" y="1918" font-size="30" letter-spacing="10" fill-opacity="0.6">HOPE MOTION · IMAGEN DE REFERENCIA</text>
+  </g>
+
+  <rect width="1600" height="2000" fill="url(#heroShade)"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Imagen de banda de la campaña (imagen de referencia)">
+  <defs>
+    <linearGradient id="bandBase" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16110d"/>
+      <stop offset="55%" stop-color="#4a2a1d"/>
+      <stop offset="100%" stop-color="#c05a38"/>
+    </linearGradient>
+    <radialGradient id="bandGlow" cx="0.82" cy="0.2" r="0.7">
+      <stop offset="0%" stop-color="#d9a441" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#d9a441" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bandBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="80"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bandBase)"/>
+  <rect width="1600" height="900" fill="url(#bandGlow)"/>
+
+  <g filter="url(#bandBlur)" opacity="0.5">
+    <circle cx="1280" cy="240" r="240" fill="#f0c46a"/>
+    <circle cx="320" cy="700" r="260" fill="#8a3f26"/>
+  </g>
+
+  <g stroke="#f8f2e9" stroke-opacity="0.16" stroke-width="2" fill="none">
+    <path d="M0 640 C 340 560, 620 720, 940 620 S 1440 460, 1600 520"/>
+    <path d="M0 740 C 340 660, 620 820, 940 720 S 1440 560, 1600 620"/>
+    <path d="M0 840 C 340 760, 620 920, 940 820 S 1440 660, 1600 720"/>
+  </g>
+
+  <g fill="#f8f2e9" font-family="Georgia, 'Times New Roman', serif">
+    <text x="100" y="440" font-size="88" font-style="italic" fill-opacity="0.92">cada aporte es un paso</text>
+    <text x="104" y="512" font-size="26" letter-spacing="9" fill-opacity="0.55">HOPE MOTION · IMAGEN DE REFERENCIA</text>
+  </g>
+</svg>

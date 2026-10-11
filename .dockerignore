@@ -1,0 +1,42 @@
+# Dependencies & build output
+node_modules
+.next
+out
+build
+dist
+coverage
+
+# Git & CI
+.git
+.github
+.gitlab-ci.yml
+
+# Docker (never bake compose/infra into the image)
+Dockerfile
+docker-compose*.yml
+compose*.yaml
+.dockerignore
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+
+# Documentation & assets not needed at runtime
+README.md
+LICENSE
+docs
+screenshots
+*.md
+
+# Editor & OS
+.vscode
+.idea
+.DS_Store
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Misc
+.vercel
+*.tsbuildinfo

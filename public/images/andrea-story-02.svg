@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Fotografía de la historia de Andrea, capítulo dos (imagen de referencia)">
+  <defs>
+    <linearGradient id="s2Base" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2a1c15"/>
+      <stop offset="50%" stop-color="#5c3524"/>
+      <stop offset="100%" stop-color="#c05a38"/>
+    </linearGradient>
+    <radialGradient id="s2Sun" cx="0.75" cy="0.3" r="0.6">
+      <stop offset="0%" stop-color="#f0c46a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#f0c46a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="s2Blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="1500" fill="url(#s2Base)"/>
+  <rect width="1200" height="1500" fill="url(#s2Sun)"/>
+
+  <g filter="url(#s2Blur)" opacity="0.5">
+    <circle cx="320" cy="360" r="220" fill="#e8b45c"/>
+    <circle cx="900" cy="1180" r="280" fill="#7a2f1d"/>
+  </g>
+
+  <g stroke="#f8f2e9" stroke-opacity="0.2" stroke-width="2" fill="none">
+    <path d="M120 1180 L 600 760 L 1080 1180"/>
+    <path d="M120 1300 L 600 880 L 1080 1300"/>
+  </g>
+
+  <g fill="#f8f2e9" font-family="Georgia, 'Times New Roman', serif">
+    <text x="80" y="1360" font-size="64" font-style="italic" fill-opacity="0.9">capítulo dos</text>
+    <text x="84" y="1420" font-size="24" letter-spacing="8" fill-opacity="0.55">HOPE MOTION · IMAGEN DE REFERENCIA</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+# -----------------------------------------------------------------------------
+# Hope Motion — production stack
+#   docker compose -f compose.prod.yaml up -d --build   ->  http://localhost:3000
+# -----------------------------------------------------------------------------
+services:
+  web:
+    build:
+      context: .
+      target: runner
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+        NEXT_PUBLIC_GOFUNDME_URL: ${NEXT_PUBLIC_GOFUNDME_URL:-https://www.gofundme.com/f/ayuda-a-andrea-a-volver-a-caminar-sin-muletas}
+        NEXT_PUBLIC_CONTACT_WHATSAPP: ${NEXT_PUBLIC_CONTACT_WHATSAPP:-}
+    image: hope-motion:prod
+    init: true
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+      NEXT_PUBLIC_GOFUNDME_URL: ${NEXT_PUBLIC_GOFUNDME_URL:-https://www.gofundme.com/f/ayuda-a-andrea-a-volver-a-caminar-sin-muletas}
+      NEXT_PUBLIC_CONTACT_WHATSAPP: ${NEXT_PUBLIC_CONTACT_WHATSAPP:-}
+    env_file:
+      - path: .env
+        required: false
+    healthcheck:
+      test:
+        - CMD
+        - node
+        - -e
+        - "fetch('http://127.0.0.1:3000/').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3

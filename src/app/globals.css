@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #16110d;
+  --color-ink-soft: #2b221b;
+  --color-muted: #6f6155;
+  --color-paper: #f8f2e9;
+  --color-linen: #fdfaf5;
+  --color-sand: #ece0d1;
+  --color-clay: #c05a38;
+  --color-clay-dark: #9d4526;
+  --color-gold: #d9a441;
+  --color-sage: #5c6b58;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  em {
+    font-family: var(--font-fraunces-italic), "Iowan Old Style", Georgia, serif;
+    font-style: italic;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .grain::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.28'/%3E%3C/svg%3E");
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .hero-scrim {
+    background-image: linear-gradient(
+      to top,
+      rgba(18, 12, 9, 0.96) 0%,
+      rgba(18, 12, 9, 0.78) 38%,
+      rgba(18, 12, 9, 0.3) 72%,
+      rgba(18, 12, 9, 0.45) 100%
+    );
+  }
+
+  @media (min-width: 1024px) {
+    .hero-scrim {
+      background-image: linear-gradient(
+        to right,
+        rgba(18, 12, 9, 0.96) 0%,
+        rgba(18, 12, 9, 0.86) 34%,
+        rgba(18, 12, 9, 0.35) 68%,
+        rgba(18, 12, 9, 0.55) 100%
+      );
+    }
+  }
+}
+
+@utility display-italic {
+  font-family: var(--font-fraunces-italic), "Iowan Old Style", Georgia, serif;
+  font-style: italic;
+}
