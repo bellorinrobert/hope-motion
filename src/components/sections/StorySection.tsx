@@ -79,9 +79,9 @@ export function StorySection() {
           eyebrow="Mi historia"
           title={
             <>
-              De un avance individual a un{" "}
-              <em className="font-normal italic text-clay">movimiento</em>{" "}
-              colectivo
+              Volver a caminar {" "}
+              <em className="font-normal italic text-clay"> sin </em>{" "}
+              muletas.
             </>
           }
           description="Una narrativa contada paso a paso: el comienzo, el acompañamiento y la meta que hoy mueve a una comunidad entera."
