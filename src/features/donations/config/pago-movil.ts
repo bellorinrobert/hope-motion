@@ -11,7 +11,7 @@ export const pagoMovilConfig: PagoMovilConfig = {
   whatsapp: {
     number: "+584245095229",
     message:
-      "Hola 👋 Realicé una donación a la campaña de Andrea por Pago Móvil. Te comparto el comprobante.",
+      "¡Hola! A pesar que un granito de arena sea pequeño, sumado al de varias personas ayudan a cumplir sueños gigantescos. Aquí va mi granito de arena para apoyar la campaña de Andrea, junto al comprobante de mi Pago Móvil. ¡Vamos por más!",
   },
 };
 
