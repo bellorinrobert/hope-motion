@@ -76,7 +76,7 @@ export function StorySection() {
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHeading
           id="historia-title"
-          eyebrow="La historia"
+          eyebrow="Mi historia"
           title={
             <>
               De un avance individual a un{" "}
